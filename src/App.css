@@ -1,33 +1,111 @@
 .App {
   text-align: center;
+  font-family: 'Kanit', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  --color: #786450;
+  background: #f5e8df7a;
+  border-radius: 3px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+  
+  display: grid;
+  /* grid-template-columns: 200px 1fr; */
+  /* grid-template-rows: repeat(2, 1fr); */
+  grid-gap: 1px;
+  height: 400px;
+  width: 320px;
+  color: var(--color);
+  margin: 10px;
+}
+
+.card-main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* padding: 35px 40px; */
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card-main h1 {
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  line-height: 1;
+}
+.card-main p {
+  font-size: 11px;
+  font-weight: 300;
+  margin: 0 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  border: 1px solid var(--color);
+  /* Ridiculously large border-radius makes the element capsule-shaped */
+  border-radius: 500px;
+  color: var(--color);
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  transition: all linear .3s;
+  transition-property: background, color;
+}
+
+.btn:first-of-type {
+  margin-bottom: 10px;
+}
+
+.btn:hover {
+  background: var(--color);
+  color: #fff;
+}
+
+.card-stat {
+  background: #f5e8df;
+  cursor: pointer;
+  transition: background linear .3s;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-stat:hover {
+  background: #e1cfc2;
+}
+
+.stat-number {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.stat-name {
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1;
 }
