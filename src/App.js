@@ -1239,6 +1239,62 @@ function App() {
           </div>
         </div>
       </div>
+      <div style={{display: 'flex', flexDirection: 'row', position: 'absolute', left: '10px', top: '1450px'}}>
+        <div class="card1">
+          <div class="card-main"><h1>Time Series</h1></div>
+          <div class="card-stat">
+            <Chart
+              width={'660px'}
+              height={'440px'}
+              chartType="LineChart"
+              loader={<div>Loading Chart</div>}
+              data={[
+                    ['ปี', 'total', 'forecast'],
+                    ['2547', 3003922037, null],
+                    ['2548', 4261623528, null],
+                    ['2549', 3904223663, null],
+                    ['2550', 5107973724, null],
+                    ['2551', 5671654603, null],
+                    ['2552', 4612763604, null],
+                    ['2553', 4582493857, null],
+                    ['2554', 5013275039, 5.750090e+09],
+                    ['2555', 4458827469, 6.523912e+09],
+                    ['2556', 7293498153, 7.140584e+09],
+                    ['2557', 7618943507, 7.716972e+09],
+                    ['2558', 15116483703, 8.284479e+09],
+                    ['2559', 10683081267, 8.850174e+09],
+                    ['2560', 7221090405, 9.415516e+09],
+                    ['2561', 9449432383, 9.980792e+09],
+                    ['2562', 9038818434, 1.054606e+10],
+                    ['2563', , 1.111132e+10],
+                    ['2564', , 1.167658e+10],
+                    ['2565', , 1.224184e+10],
+                    ['2566', , 1.280710e+10],
+                    ['2567', , 1.337236e+10],
+                    ['2568', , 1.393762e+10],
+                  ]}
+              options={{
+                hAxis: {
+                  title: 'ปี',
+                },
+                vAxis: {
+                  title: 'งบประมาณ(บาท)',
+                },
+                colors: ['rgb(73, 145, 193)', 'rgb(255, 159, 83)'],
+              }}
+              rootProps={{ 'data-testid': '1' }}
+            />
+          </div>
+        </div>
+        <div class="card1">
+          <div class="card-main">
+            <h1>ขอขอบคุณแหล่งข้อมูล</h1>
+            <h1>
+              <a href="http://www.bb.go.th/budgeting-map1.php?mid=682">http://www.bb.go.th/budgeting-map1.php?mid=682</a>
+            </h1>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
